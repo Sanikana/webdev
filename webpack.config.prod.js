@@ -4,7 +4,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-
 export default {
     debug: true,
     devtool: 'source-map',
@@ -48,6 +47,9 @@ export default {
                 minifyURLs: true
             },
             inject: true,
+            // Properties you define here are available in index.html
+            // using htmlWebpackPlugin.options.varName
+            trackJSToken: '43ad216f57d94259968435894490a5c7'
         }),
 
         // Eliminate duplicate packages when generating bundle
